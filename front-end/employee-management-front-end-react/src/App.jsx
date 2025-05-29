@@ -11,14 +11,16 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
+
         <Routes>
           <Route path='/' element={<EmployeeListComponent />}></Route>
           <Route path='/read-employees' element={<EmployeeListComponent />}></Route>
           <Route path='add-employee' element={<AddEmployee />}></Route>
+          <Route path='/update-employee/:id' element={<AddEmployee />}></Route>
         </Routes>
+        
         <Footer /> 
       </BrowserRouter>
-
     </>
   )
 }
