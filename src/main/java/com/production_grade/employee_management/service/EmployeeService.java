@@ -6,7 +6,7 @@ import com.production_grade.employee_management.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-//thyis class implements the EmployeeServiceInterface with crud methods
+//this class implements the EmployeeServiceInterface with crud methods
 @Service
 public class EmployeeService implements EmployeeServiceI {
     private final EmployeeRepository employeeRepository;
@@ -34,7 +34,18 @@ public class EmployeeService implements EmployeeServiceI {
     }
 
 //    update employee
+public Employees updateEmployee(Long id,Employees updatedEmployee) {
+    Employees existingEmployee = employeeRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Employee with id " + id + " not found"));
 
+//        existing employee
+    existingEmployee.setEmployeeName(updatedEmployee.getEmployeeName());
+    existingEmployee.setEmployeeLastname(updatedEmployee.getEmployeeLastname());
+    existingEmployee.setEmployeeEmail(updatedEmployee.getEmployeeEmail());
+
+    return employeeRepository.save(existingEmployee);
+
+}
 //    delete employee
     public void deleteEmployee(Long id) {
         if (!employeeRepository.existsById(id)) {
@@ -45,17 +56,5 @@ public class EmployeeService implements EmployeeServiceI {
 
     }
 
-//    update
-    public Employees updateEmployee(Long id,Employees updatedEmployee) {
-        Employees existingEmployee = employeeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Employee with id " + id + " not found"));
 
-//        existing employee
-        existingEmployee.setEmployeeName(updatedEmployee.getEmployeeName());
-        existingEmployee.setEmployeeLastname(updatedEmployee.getEmployeeLastname());
-        existingEmployee.setEmployeeEmail(updatedEmployee.getEmployeeEmail());
-
-        return employeeRepository.save(existingEmployee);
-
-    }
 }
