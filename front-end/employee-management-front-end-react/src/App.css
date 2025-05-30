@@ -1,12 +1,13 @@
-.footer{
-    position: absolute;
+.footer {
+    position: relative; 
+    bottom:0;  
     width: 100%;
     background-color: rgba(0, 0, 0, 0.904);
     text-align: center;
     color: white;
-    padding: 05px;
-    bottom: 0;
+    padding: 5px 0;
 }
+
 form{
     width: 50%;
     margin: auto;

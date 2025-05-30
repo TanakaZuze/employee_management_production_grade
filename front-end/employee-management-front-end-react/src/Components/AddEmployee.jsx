@@ -20,6 +20,7 @@ function AddEmployee() {
 
     const navigator = useNavigate();
 
+    // for updating
     useEffect(() => {
         if (id) {
             getEmployeeById(id).then((response) => {
@@ -72,7 +73,7 @@ function AddEmployee() {
 
     }
 
-    
+
 
     // function to validate form
     function validateAddEmployeeForm() {
@@ -129,6 +130,7 @@ function AddEmployee() {
 
 
             <form className='border border-dark-subtle p-3'>
+
                 <div className="mb-3">
                     <label htmlFor="firstName" className="form-label">Employee Name:</label>
                     <input
