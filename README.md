@@ -22,8 +22,7 @@ This is the **Spring Boot backend and React frontend** for the Employee Manageme
 - **Spring Boot 3.x**
 - **Spring Web**
 - **Spring Data JPA**
-- **H2** (default dev DB)
-- **MySQL** / **PostgreSQL** (optional)
+- **MySQL**  
 - **Lombok**
 - **Maven**
 
