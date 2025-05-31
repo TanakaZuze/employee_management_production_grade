@@ -1,6 +1,6 @@
-# 🧑‍💼 Employee Management System - Backend
+# 🧑‍💼 Employee Management System - Fullstack
 
-This is the **Spring Boot backend** for the Employee Management System. It provides RESTful APIs to manage employee records, perform CRUD operations, and seamlessly integrate with a React + Vite frontend.
+This is the **Spring Boot backend and React frontend** for the Employee Management System. It provides RESTful APIs to manage employee records, perform CRUD operations, and seamlessly integrate with a React + Vite frontend.
 
 > 🎥 **Video Walkthrough**: [Watch on Loom](https://www.loom.com/share/4e867f05ce9a40f0bb9b088c37d23202?sid=8075c5ab-8279-420b-8147-5546123df38d)
 
