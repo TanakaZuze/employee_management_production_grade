@@ -26,8 +26,6 @@ function EmployeeListComponent() {
         navigator(`/update-employee/${id}`)
     }
 
-
-
     function deleteEmployees(id) {
         deleteEmployee(id)
             .then((response) => {
@@ -38,7 +36,6 @@ function EmployeeListComponent() {
             })
             .catch(err => console.error(err));
     }
-
 
 
     return (

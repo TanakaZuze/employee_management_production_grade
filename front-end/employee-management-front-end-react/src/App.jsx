@@ -20,10 +20,11 @@ function App() {
           <Route path='/add-employee' element={<AddEmployee />}></Route>
           <Route path='/update-employee/:id' element={<AddEmployee />}></Route>
           <Route path='/departments-list' element={< DepartmentListComponent />}></Route>
-          <Route path='add-department' element={<AddDepartment />}></Route>
+          <Route path='/add-department' element={<AddDepartment />}></Route>
+          <Route path='/update-department/:id' element={<AddDepartment />}></Route>
         </Routes>
         {/* <Footer /> */}
-      </BrowserRouter>
+      </BrowserRouter>``
     </>
   )
 }

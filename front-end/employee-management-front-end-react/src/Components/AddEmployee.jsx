@@ -63,7 +63,8 @@ function AddEmployee() {
                     console.log(error)
                 })
             } else {
-                addEmployee(employees).then((response) => {
+                addEmployee(employees)
+                .then((response) => {
                     console.log(response.data);
                     navigator('/')
                 }).catch(err => console.error(err));
@@ -84,14 +85,14 @@ function AddEmployee() {
         if (employeeName.trim()) {
             errorsCopy.employeeName = '';
         } else {
-            errorsCopy.employeeName = 'First name is recquired'
+            errorsCopy.employeeName = 'First name is required'
             valid = false;
         }
 
         if (employeeLastname.trim()) {
             errorsCopy.employeeLastname = '';
         } else {
-            errorsCopy.employeeLastname = 'Last name is recquired'
+            errorsCopy.employeeLastname = 'Last name is required'
             valid = false;
         }
 

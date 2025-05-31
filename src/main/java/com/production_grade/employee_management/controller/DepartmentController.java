@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin("http://localhost:5173")
 @RestController
 public class DepartmentController {
     private final DepartmentService departmentService;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { listOfAllDepartments } from '../Services/AllDepartmentsService';
 import { useNavigate } from 'react-router-dom';
+import { deleteDepartment } from '../Services/DeleteDepartmentService';
 
 function DepartmentListComponent() {
     // consuming get all departments APIs
@@ -21,7 +22,20 @@ function DepartmentListComponent() {
         navigator('/add-department')
     }
 
+    function updateDepartment(id) {
+        navigator(`/update-department/${id}`)
+    }
 
+    // delete department
+    function deleteDpt(id) {
+        deleteDepartment(id)
+            .then((response) => {
+                console.log(response.data)
+
+                // remove department from UI and state
+                setDepartments((prevDepartment) => prevDepartment.filter(dpt => dpt.id !== id));
+            }).catch(err => console.error(err))
+    }
 
 
 
@@ -52,8 +66,8 @@ function DepartmentListComponent() {
                                     <td>{dpt.departmentName}</td>
                                     <td>{dpt.departmentDescription}</td>
                                     <td>
-                                        <button type="button" className="btn btn-secondary me-3">Update</button>
-                                        <button type="button" className="btn btn-danger">Delete</button>
+                                        <button type="button" className="btn btn-secondary me-3" onClick={() => updateDepartment(dpt.id)}>Update</button>
+                                        <button type="button" className="btn btn-danger" onClick={() => deleteDpt(dpt.id)}>Delete</button>
 
                                     </td>
                                 </tr>

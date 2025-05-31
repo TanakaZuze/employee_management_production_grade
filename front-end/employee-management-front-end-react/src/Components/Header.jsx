@@ -5,14 +5,14 @@ function Header() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">
+        <a className="navbar-brand" href="#">
           <h3 className='text-white px-2'>Employee Management System</h3>
         </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <li class="nav-item">
+            <li className="nav-item">
               <NavLink className="nav-link text-white"to='/'>Employees</NavLink>
             </li>
 
